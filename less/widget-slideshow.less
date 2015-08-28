@@ -1,0 +1,71 @@
+//
+// Copyright 2014 BaseKit Platform Ltd
+//
+// ---------
+// slideshow
+// ---------
+
+.responsiveslideshow {
+	ul {
+		padding-bottom: 40px;
+	}
+	.slides-list,
+	.figure {
+		position: relative;
+   		min-height: 500px;
+	}
+	.caption {
+		padding: 30px 20px;
+		background-color: hsla(hue(@color-swatch7), saturation(@color-swatch7), lightness(@color-swatch7), 0.8);
+	}
+	.image-title,
+	.image-description {
+		color: @color-swatch1;
+	}
+	.image-title {
+		font-size: @font-swatch4-font-size;
+	    font-weight: @font-swatch4-font-weight;
+	    padding-bottom: 18px;
+	}
+	.image-description {
+		font-size: bkscale(@font-swatch5-font-size, 0.75);
+   		line-height: bkscale(@font-swatch5-line-height, 0.75);
+	}
+	.slide-navigation,
+	.slide-pagination {
+		position: absolute;
+		top: 30px;
+	}
+	.slide-navigation {
+		left: 20px;
+		margin: 0;
+	}
+	.slide-pagination {
+		right: 20px;
+	}
+	.icon:before {
+		margin-right: 20px;
+	}
+	.control-text {
+		display: none;
+	}
+	.button {
+		margin: 0;
+		padding: 0;
+		background-color: transparent;
+		font-size: bkscale(@font-swatch5-font-size, 0.75);
+		font-weight: @font-swatch5-font-weight;
+   		line-height: bkscale(@font-swatch5-line-height, 0.75);
+		text-transform: none;
+		&:hover {
+			color: @contrast-color;
+		}
+	}
+	.button--pagination {
+		margin-left: 20px;
+	}
+	.selected .button {
+		background-color: transparent;
+		color: @contrast-color;
+	}
+}

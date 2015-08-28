@@ -1,0 +1,96 @@
+//
+// Copyright 2014 BaseKit Platform Ltd
+//
+// -------
+// gallery
+// -------
+
+// Gallery 3 column layout
+// -----------------------
+
+.gallery ul {
+    padding-bottom: 17px;
+}
+
+// Title and description colour
+.gallery .image-title,
+.gallery .image-description {
+    color: @color-swatch1;
+}
+
+.gallery .image-title {
+    font-size: @font-swatch4-font-size;
+    font-weight: @font-swatch4-font-weight;
+    padding-bottom: 18px;
+}
+
+.gallery .image-description {
+    font-size: bkscale(@font-swatch5-font-size, 0.75);
+    line-height: bkscale(@font-swatch5-line-height, 0.75);
+}
+
+// Gallery list container
+.gallery-list {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -moz-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+// Gallery items
+.gallery .gallery-item {
+    position: relative;
+    width: 32%;
+    margin-bottom: 2%;
+    // Display 100% at mobile
+    @media @mobile {
+        width: 100%;
+        margin-bottom: 4%;
+    }
+}
+
+// Gallery item links
+.gallery .image-link {
+    display: block;
+    height: 280px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    @media @tablet {
+        height: 210px;
+    }
+}
+
+// Gallery hide img element (uses background cover technique)
+.gallery .image {
+    display: none;
+}
+
+// Gallery caption
+.gallery .caption {
+    display: none;
+    margin: 0;
+    padding: 30px 20px;
+    background-color: hsla(hue(@color-swatch7), saturation(@color-swatch7), lightness(@color-swatch7), 0.8);
+}
+
+.gallery .figure:hover .caption-link {
+    text-decoration: none;
+}
+
+// Gallery show caption on hover
+.gallery .figure:hover .caption {
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 100%;
+}

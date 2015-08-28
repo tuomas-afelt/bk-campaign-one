@@ -1,0 +1,388 @@
+/* ----------------------------------------
+
+	COLOR & FONT SWATCHES:
+
+	Colour Swatches
+	========================================
+	"color1": == Background
+	"color2": == Contrast Color
+	"color3": == Button BG Color
+	"color4": == Heading Text Color (H1 - H4)
+	"color5": == Paragraph Text Color
+	"color6": == Nav Link Color
+	"color7": == Spare Color
+
+	Font Swatches
+	========================================
+	"font1":  == Heading 1
+	"font2":  == Heading 2
+	"font3":  == Heading 3
+	"font4":  == Heading 4
+	"font5":  == Paragraph
+	"font6":  == Navigation Text
+	"font7":  == Buttons
+	"font8":  == Feature Title
+	"font9":  == Feature Subtitle
+	"font10": == Logo
+
+---------------------------------------- */
+
+/* Widgets
+========================================================================== */
+
+/* Contact Form
+-------------------------------------------------------------------------- */
+
+.contactform {
+	padding-bottom: 40px;
+	button {
+		margin-bottom: 0;
+	}
+}
+
+/* Twitter
+-------------------------------------------------------------------------- */
+
+.twitter {
+	ul {
+		padding-bottom: 33px;
+	}
+	.tweet-item {
+		margin-bottom: 60px;
+		padding-bottom: 53px;
+		border-bottom: 1px solid darken(@bg-color, 10%);
+		&:last-child {
+			margin-bottom: 0;
+			padding-bottom: 0;
+			border-bottom: 0;
+		}
+	}
+	.avatar-image {
+		margin-bottom: 21px;
+	}
+	.tweet-content {
+		padding-bottom: 14px;
+	}
+	span.tweet-metadata,
+	span.via {
+		font-size: @font-swatch6-font-size;
+   		line-height: @font-swatch6-line-height;
+		@media @tablet {
+			font-size: bkscale(@font-swatch5-font-size, 0.65);
+			line-height: bkscale(@font-swatch5-line-height, 0.65);
+		}
+	}
+}
+
+/* Button
+-------------------------------------------------------------------------- */
+
+.buttonwidget {
+	button {
+		margin-bottom: 39px;
+	}
+}
+
+/* Social icons
+-------------------------------------------------------------------------- */
+
+.socialicons {
+	ul {
+		padding-bottom: 36px;
+	}
+	a {
+		font-size: @font-swatch6-font-size;
+   		line-height: @font-swatch6-line-height;
+	}
+}
+
+/* Youtube
+-------------------------------------------------------------------------- */
+
+.youtube {
+	padding-bottom: 40px;
+}
+
+/* Line
+-------------------------------------------------------------------------- */
+
+.line {
+	.rule {
+		height: 1px;
+		margin: 0 0 40px 0;
+		background-color: darken(@bg-color, 10%);
+	}
+}
+
+/* Map
+-------------------------------------------------------------------------- */
+
+.map {
+	padding-bottom: 40px;
+}
+
+/* Profile
+-------------------------------------------------------------------------- */
+
+.profile {
+	.strapline,
+	.description,
+	.address,
+	.emailaddress,
+	.companyphone,
+	.business,
+	.copyright,
+	.twitter p {
+		padding-bottom: 28px;
+	}
+	.address-line {
+		padding-bottom: 0px;
+	}
+	.social-list {
+		padding-bottom: 34px;
+	}
+}
+
+/* Image
+-------------------------------------------------------------------------- */
+
+.imagewidget {
+	.caption {
+		margin: 0 0 33px 0;
+	}
+	.image-title {
+		padding-bottom: 18px;
+		font-size: @font-swatch2-font-size;
+		font-weight: @font-swatch2-font-weight;
+		color: @font-swatch4-color;
+	}
+	.image-description {
+		color: @font-swatch5-color;
+	}
+}
+
+/* Buttons
+-------------------------------------------------------------------------- */
+
+.paypalbuynow button,
+.tweet .button,
+.dropbox button,
+.clicktocall a {
+	margin-bottom: 40px;
+}
+
+/* PayPal
+-------------------------------------------------------------------------- */
+
+.paypalbuynow {
+	form {
+		padding: 0;
+		background-color: transparent;
+		.box-shadow (0px, 0px, 0px, 0%);
+		button {
+			background-color: @font-swatch7-background-color;
+			&:hover,
+			&:active {
+				background-color: @font-swatch7-background-color-hover;
+			}
+		}
+	}
+}
+
+/* Click to call
+-------------------------------------------------------------------------- */
+
+.clicktocall a {
+	display: inline-block;
+	padding: 16px 40px 14px 40px;
+	background-color: @font-swatch7-background-color;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: @bg-color;
+	.border-radius (30px);
+	&:hover,
+	&:active {
+		background-color: @font-swatch7-background-color-hover;
+		text-decoration: none;
+	}
+}
+
+/* Sign-up form
+-------------------------------------------------------------------------- */
+
+.signupform {
+	margin-bottom: 34px;
+	.input--email {
+		margin-bottom: 20px;
+	}
+	button {
+		margin-bottom: 0px;
+	}
+}
+
+/* Fonecta Contact Form
+-------------------------------------------------------------------------- */
+
+.fonectacontactform {
+
+	margin-bottom: 60px;
+
+	// Text elements
+	p, a, .text {
+		display: inline-block;
+		font-size: @font-swatch6-font-size;
+		color: @bg-color;
+	}
+	p {
+		padding-bottom: 11px;
+	}
+	.text {
+		padding: 3px 0 1px 0;
+	}
+	a {
+		padding-bottom: 6px;
+		text-decoration: underline;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+	label {
+		margin: 0;
+	}
+
+	// FA inputs
+	input[type="checkbox"],
+	input[type="radio"] {
+		display: none;
+	}
+	input[type="checkbox"] + label::before,
+	input[type="radio"] + label::before {
+		position: relative;
+		top: 0px;
+		cursor: pointer;
+		display: inline-block;
+		margin-right: 10px;
+		font-family: "FontAwesome";
+		font-size: @font-swatch6-font-size;
+		vertical-align: middle;
+	}
+	input[type="checkbox"] + label::before {
+		content: "\f096";
+	}
+	input[type="checkbox"]:checked + label::before {
+		margin-right: 7.75px;
+		content: "\f046";
+	}
+	input[type="radio"] + label::before {
+		content: "\f10c";
+	}
+	input[type="radio"]:checked + label::before {
+		content: "\f192";
+	}
+
+	// Button
+	button {
+		.border-radius (0px);
+		margin: 11px 0 12px 0;
+		width: 100%;
+	}
+
+	// Arrow
+	&:before {
+		position: absolute;
+		top: 50%;
+		left: -15px;
+		font-family: "FontAwesome";
+		font-size: 40px;
+		content:"\f054";
+		color: @bg-color;
+	}
+
+	@media @tablet {
+		&:before {
+			top: -15px;
+			left: 45.5%;
+			.rotate(90deg);
+		}
+	}
+
+}
+
+/* Fonecta Map
+-------------------------------------------------------------------------- */
+
+.fonectamap {
+
+	// Map
+	#mapDiv0 img {
+		max-width: none;
+		margin: 0;
+	}
+	// View tool
+	#gk_mc {
+		input[type="button"] {
+			margin: 0;
+			padding: 5px;
+			border-color: #6c6c6c;
+			background-color: #c0c0c0;
+			font-family: arial, sans-serif;
+			font-size: 12px;
+			color: #000000;
+			line-height: 1;
+			text-transform: none;
+			.border-radius (0px);
+			&:hover,
+			&:active {
+				background-color: #c0c0c0;				
+			}
+		}
+	}
+
+}
+
+/* Soundcloud, Facebook comments, Facebook like, Donation, LinkedIn
+-------------------------------------------------------------------------- */
+
+.soundcloud,
+.facebookcomments,
+.facebooklike,
+.donation,
+.linkedincompanyprofile,
+.linkedinprofile {
+	margin-bottom: 40px;
+}
+
+.facebookcomments .fb_iframe_widget_fluid span {
+	max-width: 100%;
+}
+
+/* Yelp Review
+-------------------------------------------------------------------------- */
+
+.yelpreview {
+	.yelp-title,
+	.review-text {
+		padding-bottom: 18px;
+	}
+	.review-list {
+		list-style-type: none;
+		margin-left: 0;
+		padding-bottom: 0;
+	}
+	.review-item {
+		margin-bottom: 60px;
+		padding-bottom: 60px;
+		border-bottom: 1px solid darken(@bg-color, 10%);
+		&:last-child {
+			margin-bottom: 0;
+			padding-bottom: 0;
+			border-bottom: 0;
+		}
+	}
+	.review-title {
+		padding-bottom: 9px;
+	}
+	.review-rating img {
+		margin-bottom: 16px;
+	}
+}

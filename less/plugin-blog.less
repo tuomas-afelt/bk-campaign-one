@@ -1,0 +1,65 @@
+//
+// Copyright 2014 BaseKit Platform Ltd
+//
+// ----
+// blog
+// ----
+
+.blogpost {
+	padding-bottom: 5px;
+	.post-article {
+		margin-bottom: 60px;
+		&:only-child,
+		&:last-child {
+			margin-bottom: 30px;
+		}
+	}
+	.post-content {
+		margin: 0;
+	}
+	.post-footer {
+		margin-top: 5px;
+		padding: 30px;
+		border: 1px solid darken(@bg-color, 10%);
+	}
+	.timestamp {
+		margin: 0;
+		padding-bottom: 19px;
+		font-weight: bold;
+	}
+	.post-attributes {
+		margin: 0;
+		padding-bottom: 19px;
+		p,
+		ul {
+			padding: 0;
+		}
+	}
+	.timestamp,
+	.category-title,
+	.category-link,
+	.tags-title,
+	.tag-item {
+		font-size: @font-swatch6-font-size;
+   		line-height: @font-swatch6-line-height;
+	}
+	.sharing-links {
+		padding-bottom: 0;
+		.button {
+			margin: 0;
+			padding: 0;
+			background-color: transparent;
+			font-size: @font-swatch6-font-size;
+			font-weight: @font-swatch6-font-weight;
+   			line-height: @font-swatch6-line-height;
+   			color: @contrast-color;
+   			text-transform: none;
+   			&:hover {
+   				text-decoration: underline;
+   			}
+		}
+		.icon:before {
+			margin-right: 10px;
+		}
+	}
+}

@@ -1,0 +1,71 @@
+<!-- Drawer -->
+<div id="template-drawer">
+
+  <!-- Group -->
+  <div class="limit group">
+
+    <!-- Company -->
+    <div class="col col-8-12">
+      {{widget('logo', 'drawer-logo', {"defaultlogo": asset('images/logo.png'),"showTplWidget":"0"})|raw}}
+      {{widget('companyname', 'drawer-companyname', {"business": "profile"})|raw}}
+    </div>
+    <!-- End of Company -->
+
+    <!-- Social icons -->
+    <div class="col col-4-12 align-right">
+      {% if profile.facebook or profile.twitter or profile.linkedin or profile.youtube %}
+        <span>Seuraa meitä:</span>
+        <ul class="fa-social-icons">
+          {% if profile.facebook %}
+            <li>
+              <a href="{{profile.facebook}}" target="_blank"><i class="fa fa-facebook"></i></a>
+            </li>
+          {% endif %}
+          {% if profile.twitter %}
+            <li>
+              <a href="{{profile.twitter}}" target="_blank"><i class="fa fa-twitter"></i></a>
+            </li>
+          {% endif %}
+          {% if profile.linkedin %}
+            <li>
+              <a href="{{profile.linkedin}}" target="_blank"><i class="fa fa-linkedin"></i></a>
+            </li>
+          {% endif %}
+          {% if profile.youtube %}
+            <li>
+              <a href="{{profile.youtube}}" target="_blank"><i class="fa fa-youtube"></i></a>
+            </li>
+          {% endif %}
+        </ul>
+      {% endif %}
+      {% if profile.facebook is empty and profile.twitter is empty and profile.linkedin is empty and profile.youtube is empty %}
+        &nbsp;
+      {% endif %}
+    </div>
+    <!-- End of Social icons -->
+
+  </div>
+  <!-- End of Group -->
+
+</div>
+<!-- End of Drawer -->
+
+<!-- Navigation -->
+{% if pages|length > 1 %}
+  <div id="template-nav">
+
+    <!-- Group -->
+    <div class="limit group">
+      <div class="col col-12-12">
+
+        <!-- Extended navigation -->
+        {{widget('extendednavigation', 'navigation', {"align":"left"})|raw}}
+        <!-- End of Extended navigation -->
+
+      </div>
+    </div>
+    <!-- End of Group -->
+
+  </div>
+{% endif %}
+<!-- End of Navigation -->

@@ -1,0 +1,73 @@
+<!-- Footer -->
+<div id="template-footer">
+
+	<!-- Group -->
+	<div class="limit group">
+		<div class="col col-12-12">
+
+			<!-- Company -->
+			{{widget('companyname', 'footer-companyname', {"business": "profile"})|raw}}
+			<!-- End of Company -->
+
+			<!-- Address -->
+			{% if profile.address or profile.postalcode or profile.country %}
+				<ul>
+					{% if profile.address  %}
+						<li>{{profile.address}}</li>
+					{% endif %}
+					{% if profile.postalcode  %}
+						<li>{{profile.postalcode}}</li>
+					{% endif %}
+					{% if profile.country  %}
+						<li>{{profile.country}}</li>
+					{% endif %}
+				</ul>
+			{% endif %}
+			<!-- End of Address -->
+
+			<!-- Contact information -->
+			{% if profile.phone or profile.email %}
+				<ul>
+					{% if profile.phone  %}
+						<li><a href="tel:{{profile.phone}}">{{profile.phone}}</a></li>
+					{% endif %}
+					{% if profile.email  %}
+						<li><a href="mailto:{{profile.email}}">{{profile.email}}</a></li>
+					{% endif %}
+				</ul>
+			{% endif %}
+			<!-- End of Contact information -->
+
+			<!-- Social icons -->
+			{% if profile.facebook or profile.twitter or profile.linkedin or profile.youtube %}
+		        <ul class="fa-social-icons">
+		          {% if profile.facebook %}
+		            <li>
+		              <a href="{{profile.facebook}}" target="_blank"><i class="fa fa-facebook"></i></a>
+		            </li>
+		          {% endif %}
+		          {% if profile.twitter %}
+		            <li>
+		              <a href="{{profile.twitter}}" target="_blank"><i class="fa fa-twitter"></i></a>
+		            </li>
+		          {% endif %}
+		          {% if profile.linkedin %}
+		            <li>
+		              <a href="{{profile.linkedin}}" target="_blank"><i class="fa fa-linkedin"></i></a>
+		            </li>
+		          {% endif %}
+		          {% if profile.youtube %}
+		            <li>
+		              <a href="{{profile.youtube}}" target="_blank"><i class="fa fa-youtube"></i></a>
+		            </li>
+		          {% endif %}
+		        </ul>
+		    {% endif %}
+	        <!-- Social icons -->
+
+		</div>
+	</div>
+	<!-- Enf od Group -->
+
+</div>
+<!-- End of Footer -->

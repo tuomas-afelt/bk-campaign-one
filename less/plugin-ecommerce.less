@@ -1,0 +1,396 @@
+//
+// Copyright 2014 BaseKit Platform Ltd
+//
+// ---------
+// ecommerce
+// ---------
+
+// Product list widget
+// -------------------
+
+// Product list container
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+// Product items in container
+.product-item {
+    position: relative;
+    width: 32%;
+    margin-bottom: 2%;
+    // Display 100% at mobile
+    @media @mobile {
+        width: 100%;
+        margin-bottom: 4%;
+    }
+}
+
+// Basket widget
+// -------------
+
+// Contents of basket
+.basket-body {
+    max-width: 400px;
+    @media @mobile {
+        max-width: 100%;
+    }
+}
+
+// Image & Details positioning
+.basket-item-image,
+.basket-item-details {
+    display: inline-block;
+    vertical-align: top;
+}
+
+// Basket item positioning
+.basket-item-image {
+    width: 20%;
+    margin-right: 5%;
+    @media @mobile {
+        width: 100%;
+        margin-right: 0;
+    }
+}
+
+// Basket item details positioning
+.basket-item-details {
+    width: 73%;
+    @media @mobile {
+        width: 100%;
+    }
+}
+
+// Basket item name positioning
+.basket-item-name {
+    display: block;
+    max-width: 90%;
+    line-height: @font-swatch5-line-height;
+    @media @mobile {
+        width: 100%;
+    }
+}
+
+// Remove Button
+.item-remove {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.remove-text {
+    display: none; // Hides remove text
+}
+
+.ecomproductslist {
+    padding-bottom: 31px;
+    .fieldset--search {
+        margin-bottom: 25px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid darken(@button-color, 5%);
+    }
+    input[type="search"],
+    select {
+        display: inline-block;
+        width: 100%;
+        height: auto;
+        margin: 0;
+        padding: 10px 15px;
+        border: 2px solid lighten(@button-color, 20%);
+        background-color: transparent;
+        font-size: @font-swatch6-font-size;
+        color: @bg-color;
+        &:focus {
+            border-color: lighten(@button-color, 35%);
+            box-shadow: none;
+        }
+    }
+    select {
+        height: 53px;
+    }
+    .button {
+        margin-bottom: 0;
+    }
+    .listing-order {
+        padding: 56px 0 54px 0;
+    }
+    .product-list {
+        padding-bottom: 0;
+    }
+    .product-item {
+        padding: 40px 30px;
+        border: 1px solid darken(@bg-color, 10%);
+    }
+    .product-item-title {
+        padding-bottom: 18px;
+    }
+    .product-item-price {
+        color: @button-color;
+    }
+    .pagination-list {
+        padding-bottom: 0;
+    }
+    .pagination-item .button {
+        margin: 0 10px 0 0;
+        padding: 0;
+        background-color: transparent;
+        font-size: @font-swatch6-font-size;
+        font-weight: @font-swatch6-font-weight;
+        line-height: @font-swatch6-line-height;
+        color: @contrast-color;
+        text-transform: none;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.ecomproduct {
+    margin-bottom: 
+    .image {
+        padding-bottom: 0;
+    }
+    .product-gallery {
+        margin: 0;
+        padding: 30px 0 53px 0;
+    }
+    .message p {
+        display: inline-block;
+        padding-bottom: 18px;
+    }
+    .product-body {
+        padding-bottom: 34px;
+    }
+    .product-actions {
+        margin: 20px 0 30px 0;
+        .form {
+            margin-bottom: 30px;
+        }
+        .select--variation {
+            margin-bottom: 10px;
+        }
+        select {
+            display: inline-block;
+            width: 100%;
+            height: 53px;
+            margin: 0;
+            padding: 10px 15px;
+            border: 2px solid lighten(@button-color, 20%);
+            background-color: transparent;
+            font-size: @font-swatch6-font-size;
+            color: @bg-color;
+            &:focus {
+                border-color: lighten(@button-color, 35%);
+                box-shadow: none;
+            }
+        }
+        .button {
+            margin: 0;
+        }
+        .icon:before {
+            margin-right: 10px;
+        }
+    }
+    .product-attributes {
+        margin: 0 0 40px 0;
+        padding: 30px;
+        border: 1px solid darken(@bg-color, 10%);
+        .tag-list {
+            padding-bottom: 0;
+        }
+        .product-category,
+        .tags-title,
+        .tag-item {
+            font-size: @font-swatch6-font-size;
+            font-weight: @font-swatch6-font-weight;
+            line-height: @font-swatch6-line-height;
+        }
+    }
+}
+
+.ecombasket {
+    .icon:before {
+        margin-right: 10px;
+    }
+    .basket-toggle {
+        margin-bottom: 34px;
+    }
+    .basket-body {
+        max-width: 100%;
+        margin: 20px 0 34px 0;
+    }
+    .basket-list {
+        padding-bottom: 28px;
+    }
+    .basket-item {
+        margin-bottom: 60px;
+        padding-bottom: 52px;
+        border-bottom: 1px solid darken(@bg-color, 10%);
+        &:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: 0;
+        }
+    }
+    .basket-item-name {
+        padding-bottom: 18px;
+        @media @tablet {
+            padding-top: 30px;
+        }
+    }
+    .item-quantity,
+    .basket-item-price {
+        font-size: @font-swatch6-font-size;
+        font-weight: @font-swatch6-font-weight;
+        line-height: @font-swatch6-line-height;
+    }
+    .item-quantity {
+        padding-bottom: 5px;
+    }
+    .item-remove {
+        margin-bottom: 0;
+        padding: 0;
+        background-color: transparent;
+        font-size: @font-swatch5-font-size;
+        color: @button-color;
+    }
+    .basket-total {
+        padding-bottom: 54px;
+    }
+    .view-basket {
+        margin-bottom: 0;
+    }
+}
+
+.ecombasketsummary {
+    margin-bottom: 35px;
+    .summary-table {
+        margin-bottom: 60px;
+    }
+    .image,
+    .button {
+        margin-bottom: 0;
+        .border-radius(0px);
+        background-color: transparent;
+        color: @button-color;
+    }
+    td {
+        background-color: @bg-color;
+    }
+    td,
+    td p,
+    td span,
+    .button {
+        font-size: @font-swatch6-font-size;
+        font-weight: @font-swatch6-font-weight;
+        line-height: @font-swatch6-line-height;
+    }
+    .cell--header,
+    .cell--order-total {
+        background-color: darken(@bg-color, 5%);
+    }
+    .table-row--heading th,
+    .table-row--order-total h4 {
+        font-size: @font-swatch6-font-size;
+        font-weight: 700;
+        line-height: @font-swatch6-line-height;
+    }
+    .table-row--heading th {
+        text-align: center;
+        &:first-child {
+            text-align: left;
+        }
+    }
+    .cell--quantity,
+    .cell--price,
+    .cell--total {
+        text-align: center;
+    }
+    .quantity-wrap {
+        display: block;
+        width: 100%;
+        background-color: transparent;
+        text-align: center;
+    }
+    .quantity-field {
+        padding: 0 10px;
+    }
+    .cell {
+        padding: 12px 15px;
+    }
+    .summary-form {
+        padding: 0px;
+        background-color: transparent;
+        .box-shadow (0px, 0px, 0px, 0%);
+    }
+    .summary-form button {
+        padding: 16px 40px 14px 40px;
+        background-color: @font-swatch7-background-color;
+        font-size: @font-swatch5-font-size;
+        font-weight: 700;
+        line-height: @font-swatch5-line-height;
+        color: @bg-color;
+        text-transform: uppercase;
+        .border-radius (30px);
+        &:hover,
+        &:active {
+            background-color: @font-swatch7-background-color-hover;
+        }
+    }
+    @media @tablet {
+        .cell--image,
+        .cell--title {
+            text-align: center;
+        }
+        .cell:not(.cell--title):before {
+            margin-bottom: 4px;
+            font-size: @font-swatch6-font-size;
+            font-weight: 700;
+            line-height: @font-swatch6-line-height;
+        }
+        .quantity-wrap {
+            margin: 0 auto;
+        }
+        .cell--order-total {
+            text-align: center;
+        }
+    }
+}
+
+.ecomcategorieslist {
+    ul,
+    li {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+    ul {
+        margin-bottom: 28px;
+    }
+    li {
+        display: inline-block;
+        margin-left: 20px;
+        text-transform: capitalize;
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+}
+
+.ecomfeaturedproducts {
+    margin-bottom: 40px;
+    .product-list {
+        padding-bottom: 0;
+    }
+    .product-item {
+        padding: 40px 30px;
+        border: 1px solid darken(@bg-color, 10%);
+    }
+    .product-item-title {
+        padding-bottom: 18px;
+    }
+    .product-item-price {
+        color: @button-color;
+    }
+}

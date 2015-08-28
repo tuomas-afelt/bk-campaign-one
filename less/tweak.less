@@ -1,0 +1,125 @@
+/* Tweak
+========================================================================== */
+
+/**
+* Universal box-sizing: The box-sizing property is used to tell the browser
+* what the sizing properties (width and height) should include.
+*/
+
+html {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+*, *:before, *:after {
+	-webkit-box-sizing: inherit;
+	-moz-box-sizing: inherit;
+	box-sizing: inherit;
+}
+
+/**
+* Add antialiasing to font rendering.
+* Hide horizontal scrollbar from browsers and mobile devices.
+*/
+
+html, body {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing:grayscale;
+	-moz-font-smoothing: antialiased;
+	-ms-font-smoothing: antialiased;
+	overflow-x: hidden;
+}
+
+/* Typography
+-------------------------------------------------------------------------- */
+
+h5, h6 {
+	margin: 0;
+	color: @heading-color;
+}
+
+/**
+* Wrap too long words so they don't overflow.
+*/
+
+h1, h2, h3, h4, h5, h6, span, b, strong, i, em, a, button, html input[type="button"], input[type="reset"], input[type="submit"] {
+	word-wrap: break-word;
+}
+
+/* Embedded content
+-------------------------------------------------------------------------- */
+
+/**
+* Add maximum width to images and other elements which can have some sort of width parameter.
+*/
+
+table, img, audio, video, canvas, embed, object, iframe, button, input, optgroup, select, textarea {
+	max-width: 100%;
+}
+
+img, video, embed, object {
+	height: auto;
+}
+
+embed, object {
+	height: 100%;
+}
+
+/**
+ * IE7: Making sure the images survice the scale-down.
+ */
+
+img {
+	-ms-interpolation-mode: bicubic;
+}
+
+/* Forms
+-------------------------------------------------------------------------- */
+
+/**
+* Remove inner padding and border in Firefox 4+.
+* Remove the focus outline in Firefox, that appears when a link, select or a button is clicked.
+*/
+
+select::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+
+}
+
+select::-moz-focus-inner, button::-moz-focus-inner, input::-moz-focus-inner {
+	outline: 0;
+}
+
+/**
+* Overrides the highlight color shown.
+*/
+
+:active, a, input, textarea, button, select {
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-tap-highlight-color: transparent; /* For some Androids */
+	-moz-tap-highlight-color: rgba(0,0,0,0);
+	-ms-tap-highlight-color:rgba(0,0,0,0);
+}
+
+/**
+* Remove the dotted outline of select boxes in Firefox & Chrome.
+*/
+
+select:-moz-focusring, select:-webkit-focus-ring-color {
+	color: transparent;
+	text-shadow: 0 0 0 #000;
+}
+
+/**
+* Remove outline.
+*/
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+textarea,
+select {
+	outline: 0;
+}

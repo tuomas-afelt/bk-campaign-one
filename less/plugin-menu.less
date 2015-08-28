@@ -1,0 +1,105 @@
+//
+// Copyright 2014 BaseKit Platform Ltd
+//
+// ----
+// menu
+// ----
+
+.menusections {
+	.menusections-list {
+		margin: 0;
+		padding-bottom: 27px;
+	}
+}
+
+.menu {
+	.menu-items:not(.menu-section--subsection),
+	.menu-list {
+	  column-gap: 30px;
+	  -moz-column-gap: 30px;
+	  -webkit-column-gap: 30px;
+	}
+	.menu-item {
+		margin-bottom: 30px;
+	}
+	.section-description {
+		padding-bottom: 48px;
+	}
+	.item-article {
+		padding: 40px 30px 30px 30px;
+		border: 1px solid darken(@bg-color, 10%);
+	}
+	.item-image {
+		margin-bottom: 48px;
+	}
+	.image {
+		margin-bottom: 0;
+	}
+	.item-content {
+		margin-top: 0;
+	}
+	.item-title,
+	.item-price {
+		padding-bottom: 18px;
+	}
+	.item-price {
+		color: @button-color;
+	}
+	.item-subtitle,
+	.item-details {
+		font-size: @font-swatch6-font-size;
+   		line-height: @font-swatch6-line-height;
+	}
+	.item-subtitle {
+		padding-bottom: 18px;
+	}
+	.item-details {
+		padding-bottom: 48px;
+	}
+	.dietary-list {
+		padding-bottom: 0;
+	}
+	.dietary-item {
+		.border-radius(18px);
+		margin-bottom: 10px;
+        padding: 10px 20px;
+		background-color: darken(@bg-color, 15%);
+		font-size: @font-swatch6-font-size;
+   		line-height: @font-swatch6-line-height;
+	}
+	.menu-item--featured {
+		padding: 0;
+		background-color: @button-color;
+		.item-article {
+			border: 0;
+		}
+		.inner-shadow(0px, 0px, 8px, 0px, 35%);
+		.item-title,
+		.item-price,
+		.item-description p,
+		.item-subtitle,
+		.item-details,
+		.dietary-item {
+			color: @bg-color;
+		}
+		.image-link {
+			background-color: darken(@button-color, 5%);
+		}
+		.dietary-item {
+			background-color: darken(@button-color, 10%);
+		}
+	}
+	.menu-section--featured {
+		background: darken(@color-swatch1,10%);
+		.inner-shadow(0px, 0px, 8px, 0px, 15%);
+		.item-article {
+			border: 1px solid darken(@bg-color, 15%);
+		}
+	}
+	.menu-subsection {
+		margin-bottom: 60px;
+		&:last-child {
+			margin-bottom: 40px;
+		}
+	}
+}

@@ -1,0 +1,56 @@
+/* Mixins
+========================================================================== */
+
+.border-radius (@radius) {
+	-webkit-border-radius: @radius;
+	-moz-border-radius: @radius;
+	border-radius: @radius;
+	-moz-background-clip: padding;
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box;
+}
+
+.box-shadow (@x, @y, @blur, @alpha) {
+	-webkit-box-shadow: @x @y @blur rgba(0, 0, 0, @alpha);
+	-moz-box-shadow: @x @y @blur rgba(0, 0, 0, @alpha);
+	box-shadow: @x @y @blur rgba(0, 0, 0, @alpha);
+}
+
+.inner-shadow (@x, @y, @blur, @spread, @alpha) {
+	-webkit-box-shadow: inset @x @y @blur @spread rgba(0, 0, 0, @alpha);
+	-moz-box-shadow: inset @x @y @blur @spread rgba(0, 0, 0, @alpha);
+	box-shadow: inset @x @y @blur @spread rgba(0, 0, 0, @alpha);
+}
+
+.rotate(@deg) {
+	-ms-transform: rotate(@deg);
+	-webkit-transform: rotate(@deg);
+	transform: rotate(@deg);
+}
+
+.fa-icon(@padding, @background-color, @highlight-color) {
+	background-color: @background-color;
+	border: @padding solid @highlight-color;
+	.border-radius(50%);
+	color: @highlight-color;
+	&:before {
+		position: relative;
+		top: 1px;
+		display: block;
+		width: 30px;
+		height: 30px;
+		line-height: 30px;
+		text-align: center;
+		vertical-align: middle;
+	}
+	&:hover {
+		padding: @padding;
+		background-color: @highlight-color;
+		border: 0;
+		color: @background-color;
+	}
+	&:hover,
+	&:active {
+		text-decoration: none;
+	}
+}

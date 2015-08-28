@@ -1,0 +1,111 @@
+{
+    "name": "Campaign",
+    "thumbnail": "baseplate.png",
+    "widgetVersion": 2,
+    "pageTypes": ["home"],
+    "images": [
+        "images/feature.jpg",
+        "images/logo.png",
+        "images/person.jpg"
+    ],
+    "colorSwatches":
+    {
+        "Swatch 1": {
+            "color1":"#ffffff",
+            "color2":"#177ee5",
+            "color3":"#d93651",
+            "color4":"#333333",
+            "color5":"#525252",
+            "color6":"#333333",
+            "color7":"#333333"
+        }
+    },
+    "fontSwatch": {
+        "title": "PT Sans, Tahoma, Geneva, sans-serif",
+        "font1": {
+            "font-family": "\"PT Sans\", Tahoma, Geneva, sans-serif",
+            "font-size": "36px",
+            "font-weight": "700",
+            "line-height": "44px",
+            "color": "@color-swatch4",
+            "letter-spacing": "inherit"
+        },
+        "font2": {
+            "font-family": "\"PT Sans\", Tahoma, Geneva, sans-serif",
+            "font-size": "30px",
+            "font-weight": "700",
+            "line-height": "37px",
+            "color": "@color-swatch4",
+            "letter-spacing": "inherit"
+        },
+        "font3": {
+            "font-family": "\"PT Sans\", Tahoma, Geneva, sans-serif",
+            "font-size": "26px",
+            "font-weight": "700",
+            "line-height": "31px",
+            "color": "@color-swatch4",
+            "letter-spacing": "inherit"
+        },
+        "font4": {
+            "font-family": "\"PT Sans\", Tahoma, Geneva, sans-serif",
+            "font-size": "24px",
+            "font-weight": "700",
+            "line-height": "29px",
+            "color": "@color-swatch4",
+            "letter-spacing": "inherit"
+        },
+        "font5": {
+            "font-family": "\"PT Sans\", Tahoma, Geneva, sans-serif",
+            "font-size": "24px",
+            "font-weight": "inherit",
+            "line-height": "29px",
+            "color": "@color-swatch5",
+            "letter-spacing": "inherit"
+        },
+        "font6": {
+            "font-family": "\"PT Sans\", Tahoma, Geneva, sans-serif",
+            "font-size": "16px",
+            "font-weight": "inherit",
+            "line-height": "18px",
+            "color": "@color-swatch6",
+            "color-hover": "@color-swatch6",
+            "letter-spacing": "inherit",
+            "background-color": "@color-swatch1",
+            "background-color-hover": "@color-swatch1"
+         },
+        "font7": {
+            "font-family": "\"PT Sans\", Tahoma, Geneva, sans-serif",
+            "font-size": "24px",
+            "font-weight": "inherit",
+            "line-height": "29px",
+            "color": "@color-swatch1",
+            "letter-spacing": "inherit",
+            "background-color": "@color-swatch3",
+            "background-color-hover": "darken(@color-swatch3,10%)"
+        },
+        "font8": {
+            "font-family": "\"PT Sans\", Tahoma, Geneva, sans-serif",
+            "font-size": "60px",
+            "font-weight": "700",
+            "line-height": "76px",
+            "color": "@color-swatch1",
+            "letter-spacing": "inherit"
+        },
+        "font9": {
+            "font-family": "\"PT Sans\", Tahoma, Geneva, sans-serif",
+            "font-size": "24px",
+            "font-weight": "inherit",
+            "line-height": "29px",
+            "color": "@color-swatch1",
+            "letter-spacing": "inherit"
+        },
+        "font10": {
+            "font-family": "\"PT Sans\", Tahoma, Geneva, sans-serif",
+            "font-size": "30px",
+            "font-weight": "700",
+            "line-height": "37px",
+            "color": "@color-swatch4",
+            "letter-spacing": "inherit"
+        }
+    }
+}

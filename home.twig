@@ -1,0 +1,185 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+
+<!-- Feature -->
+<div id="template-feature">
+
+  <!-- Group -->
+  <div class="group">
+    <div class="col col-12-12">
+
+      <!-- Feature widget -->
+      {{widget('feature', 'homepagefeature', {
+        'header': 'Kuljetusta ja maanrakentamista Uudellamaalla',
+        'strapline': 'Kilpailuvalttimme ovat vankka ammattitaito, luotettavuus ja nopeat toimitukset jo 50 vuotta.',
+        'defaultBgImg': asset('images/feature.jpg'),
+        'positionTopPercentage': '50',
+        'showBtn': true,
+        'buttonText': 'Ota yhteyttä',
+        'action': 'none'
+      })|raw}}
+      <!-- End of Feature widget -->
+
+    </div>
+  </div>
+  <!-- End of Group -->
+
+</div>
+<!-- End of Feature -->
+
+<!-- CTA -->
+<div id="template-cta">
+
+  <!-- Group -->
+  <div class="limit group">
+
+    <!-- Company description -->
+    <div class="col col-6-12">
+      {{widget('image', 'companyimage', {
+        'src': asset('/images/person.jpg')
+      })|raw}}
+      {{widget('content', 'companydescription', {
+        content: '<h1>Maansiirto Järvinen Oy Ab</h1><p>Tarjoamme kuljetusyrittäjien palveluita ja kalustoa esimerkiksi maansiirtokuljetuksiin. Palvelemme maarakennusyhtiöitä ja yksityishenkilöitä koko Suomessa valttinamme omistaja-autoilijoiden pitkäaikainen ajokokemus.</p>'
+      })|raw}}
+      {{widget('content', 'companyusp', {
+        content: '<h2>Miksi sinun tulisi valita meidät?</h2><ul><li>Alalla jo vuodesta 1962</li><li>Toimialueenamme Helsinki, Espoo ja Vantaa</li><li>Tasokas kalusto on yksi vahvuuksistamme</li><li>Olemme erikoistuneet vaativiin maansiirtotöihin</li><li>Luotettavuutta, tehokkuutta ja osaamista</li></ul>'
+      })|raw}}
+    </div>
+    <!-- End of Company description -->
+
+    <!-- Contact form widget -->
+    <div class="col col-6-12" name="cta-contact">
+      {{widget('fonectacontactform', 'cta-contact', {
+        'text': 'Lähetä viesti',
+        'email': 'profile'
+      })|raw}}
+    </div>
+    <!-- End of Contact form widget -->
+
+  </div>
+  <!-- End of Group -->
+
+</div>
+<!-- End of CTA -->
+
+<!-- Customer testimonials -->
+<div id="template-testimonials">
+
+  <!-- Group -->
+  <div class="limit group">
+
+    <!-- Testimonials heading -->
+    <div class="col col-12-12">
+      {{widget('content', 'testimonialsheading', {
+        content: '<h2>Mitä asiakkaamme sanovat?</h2>'
+      })|raw}}
+    </div>
+    <!-- End of Testimonials heading -->
+
+  </div>
+  <!-- Group -->
+
+  <!-- Group -->
+  <div class="limit group">
+
+    <!-- Comment icon -->
+    <div class="col col-1-12">
+      <i class="fa fa-comments-o"></i>
+    </div>
+    <!-- End of Comment icon -->
+
+    <!-- Testimonial -->
+    <div class="col col-5-12">
+      <div class="testimonial">
+        {{widget('content', 'testimonial-one', {
+          content: '<p>Selvästi näkee, että kaverit ovat tehneet maanrakennushommia aikaisemminkin. Hommat sujuvat ja sovitut aikataulut pitää.</p>'
+        })|raw}}
+      </div>
+      <div class="person">
+        {{widget('content', 'person-one', {
+          content: '<p><b>Matti Meikäläinen</b><br><i>Yritys Oy Ab</i></p>'
+        })|raw}}
+      </div>
+    </div>
+    <!-- End of Testimonial -->
+
+    <!-- Comment icon -->
+    <div class="col col-1-12">
+      <i class="fa fa-comments-o"></i>
+    </div>
+    <!-- End of Comment icon -->
+
+    <!-- Testimonial -->
+    <div class="col col-5-12">
+      <div class="testimonial">
+        {{widget('content', 'testimonial-two', {
+          content: '<p>Laatu on yleisesti ottaen kympin arvoinen, mutta kukaanhan ei ole täydellinen. Aivan muutamaa huonoa kokemusta lukuunottamatta kuljettajat ovat täydellisen ammattitaitoisia, kohteliaita ja avuliaita. Autojen siisteys on ensiluokkainen.</p>'
+        })|raw}}
+      </div>
+      <div class="person">
+        {{widget('content', 'person-two', {
+          content: '<p><b>Matti Meikäläinen</b><br><i>Yritys Oy Ab</i></p>'
+        })|raw}}
+      </div>
+    </div>
+    <!-- End of Testimonial -->
+
+  </div>
+  <!-- End of Group -->
+
+</div>
+<!-- End of Customer testimonials -->
+
+<!-- Map -->
+<div id="template-map">
+
+  <!-- Group -->
+  <div class="limit group">
+
+    <!-- Description -->
+    <div class="col col-4-12">
+      {{widget('content', 'mapdescription', {
+        content: '<h2>Toiminta-alueemme</h2><p>Vaikka sijaitsemme Ruovedellä, ovat kaikki palvelumme saatavilla tarvittaessa koko Pohjois-Pirkanmaan alueella ja Ruoveden lähikunnissa kuten Mänttä-Vilppula -akselilla, Orivedellä ja Virroilla.</p>'
+      })|raw}}
+      {{widget('button', 'mapcontactbutton', {
+        'text': 'Ota yhteyttä',
+        'align': 'widget-align-left',
+        'action': 'none'
+      })|raw}}
+    </div>
+    <!-- End of Description -->
+
+    <!-- Map widget -->
+    <div class="col col-8-12">
+      <div class="map-wrapper">
+        {{widget('fonectamap', 'fonectamapwidget', {'height': '500', 'zoom': '15', 'address': 'profile'})|raw}}
+      </div>
+    </div>
+    <!-- End of Map widget -->
+
+  </div>
+  <!-- End of Group -->
+
+</div>
+<!-- End of Map -->
+
+<!-- Zone -->
+<div id="template-zone">
+
+  <!-- Group -->
+  <div class="limit group">
+    <div class="col col-12-12">
+
+      <!-- Main Widget Zone -->
+      {{zone('main')|raw}}
+      <!-- End of Main Widget Zone -->
+
+    </div>
+  </div>
+  <!-- End of Group -->
+
+</div>
+<!-- End of Zone -->
+
+{% endblock %}

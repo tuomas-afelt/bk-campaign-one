@@ -1,0 +1,48 @@
+<!doctype html>
+<!--[if lt IE 7]>
+	<html class="no-js ie6 oldie" lang="en">
+<![endif]-->
+<!--[if IE 7]>
+	<html class="no-js ie7 oldie" lang="en">
+<![endif]-->
+<!--[if IE 8]>
+	<html class="no-js ie8 oldie" lang="en">
+<![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="{{ page.seoLang }}" prefix="og: http://ogp.me/ns#">
+<!--<![endif]-->
+
+	<head>
+
+		{% include "includes/head.twig" %}
+
+		{% include basekit.headScript %}
+
+	</head>
+
+	<body class="{{ page.backgroundClass }} {{ site.colorSwatch }}">
+
+		{% include "includes/header.twig" %}
+		
+		{% block content %}
+		{% endblock %}
+
+		{% include "includes/footer.twig" %}
+
+		{% include basekit.bodyScript %}
+
+		<!-- Template scripts -->
+		<script src="{{asset('/js/template.js')}}"></script>
+
+		<script type="text/javascript">
+			!function() {
+				function supportsSVG() {
+					return !!document.createElementNS && !! document.createElementNS('http://www.w3.org/2000/svg', 'svg').createSVGRect
+				}
+				if (supportsSVG()) document.documentElement.className += ' svg'
+			}()
+		</script>
+
+	</body>
+
+</html>

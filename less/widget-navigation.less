@@ -1,0 +1,147 @@
+/* Navigation
+========================================================================== */
+
+// Reset navigation items
+.extendednavigation {
+    margin: 0;
+    ul, li, a, span {
+        margin: 0;
+        padding: 0;
+        line-height: 1;
+    }
+}
+
+// Parent nav items, adds arrow icon
+.item-name--parent:after {
+    display: inline-block;
+    vertical-align: middle;
+    content: "";
+    margin-left: 4px;
+    border: 5px solid transparent;
+    border-top-color: @color-swatch6;
+}
+
+// Hide toggle on desktop
+.navigation-toggle {
+    display: none;
+    &:after {
+        content: "\2630";
+    }
+    @media @tablet {
+        display: inline-block;
+    }
+}
+
+// Clears margin on ul, hides navigatio on mobile (made visible in conjunction with navigation-toggle)
+.navigation-list {
+    margin: 0;
+    @media @tablet {
+        display: none;
+        &.open {
+            display: block;
+        }
+    }
+}
+
+// Sets background colour to navigation and dropdowns
+.navigation-list--children {
+    background-color: transparent;
+}
+
+// Sets nav items to full width on mobile and tablet
+.navigation-item {
+    .border-radius(18px);
+    .item-name {
+        padding: 10px 20px;
+    }
+    &:hover .navigation-list--children {
+        display: none;
+    }
+    &.selected,
+    &:hover {
+        background-color: darken(@bg-color, 15%);
+    }
+    @media @tablet {
+        display: block;
+    }
+}
+
+// Custom
+.navigation-list--children {
+    .navigation-item {
+        background-color: darken(@bg-color, 15%);
+        border-bottom: 1px solid darken(@bg-color, 25%);
+        .border-radius(0px);
+        &:first-child {
+            margin-top: 10px;
+        }
+        &:last-child {
+            border-bottom: 0;
+        }
+        &.selected,
+        &:hover {
+            background-color: darken(@color-swatch1, 20%);
+        }
+    }
+}
+
+@media @tablet {
+
+    // Menu
+    .navigation-toggle {
+        width: 100%;
+        margin: 0;
+        padding: 10px 20px;
+        background-color: darken(@bg-color, 15%);
+        font-family: @font-swatch6-font-family;
+        font-weight: @font-swatch6-font-weight;
+        font-size: @font-swatch6-font-size;
+        line-height: @font-swatch6-line-height;
+        color: @font-swatch6-color;
+        text-transform: none;
+        .border-radius(0px);
+        &:hover {
+            background-color: darken(@bg-color, 20%);
+        }
+    }
+
+    // Menu list
+    .navigation-body {
+        text-align: center;
+        // Item
+        .navigation-item {
+            background-color: darken(@bg-color, 15%);
+            border-bottom: 1px solid darken(@bg-color, 25%);
+            .border-radius(0px);
+            &:first-child {
+                border-top: 1px solid darken(@bg-color, 25%);
+            }
+            &:last-child {
+                border-bottom: 0;
+            }
+            &:hover {
+                background-color: darken(@bg-color, 20%);
+            }
+            &:hover .navigation-list--children {
+                display: none;
+            }
+        }
+        // Children
+        .navigation-list--children {
+            position: static;
+            .navigation-item {
+                background-color: darken(@bg-color, 10%);
+                &:first-child {
+                    margin-top: 0;
+                }
+                &:hover {
+                    background-color: darken(@bg-color, 20%);
+                }
+            }
+            &:hover {
+                display: none;
+            }
+        }
+    }
+
+}
