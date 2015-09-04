@@ -1,9 +1,38 @@
-//
-// Copyright 2014 BaseKit Platform Ltd
-//
-// ----
-// blog
-// ----
+/* Blog post list
+-------------------------------------------------------------------------- */
+
+.blogpostlist {
+	margin-bottom: 40px;
+	ul {
+		padding-bottom: 0;
+	}
+	.post-article {
+		margin-bottom: 60px;
+		padding-bottom: 53px;
+		border-bottom: 1px solid darken(@bg-color, 10%);
+		.image {
+			margin-bottom: 34px;
+		}
+		.read-more {
+			display: inline-block;
+			margin-bottom: 3px;
+		}
+	}
+	.post-pagination {
+		li {
+			display: inline-block;
+			&:first-child {
+				margin-right: 14px;
+			}
+		}
+		.button {
+			margin-bottom: 0;
+		}
+	}
+}
+
+/* Blog post
+-------------------------------------------------------------------------- */
 
 .blogpost {
 	padding-bottom: 5px;
@@ -61,5 +90,15 @@
 		.icon:before {
 			margin-right: 10px;
 		}
+	}
+}
+
+/* Blog search
+-------------------------------------------------------------------------- */
+
+.blogsearch {
+	margin-bottom: 40px;
+	.button {
+		margin: 10px 0 0 0;
 	}
 }
