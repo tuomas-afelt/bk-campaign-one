@@ -1,4 +1,4 @@
-var TemplateModule = (function () {
+var TemplateModule = (function ($) {
 
 	function scrollToTarget(element, target) {
 		$(element).click(function(e) {
@@ -20,7 +20,7 @@ var TemplateModule = (function () {
 		toggleMenuChildren: toggleMenuChildren
 	};
 	
-})();
+})(jQuery);
 
 TemplateModule.scrollToTarget('#template-feature button, #template-map button', '[name="cta-contact"]');
 TemplateModule.toggleMenuChildren();
