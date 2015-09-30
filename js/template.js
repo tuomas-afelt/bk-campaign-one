@@ -1,17 +1,17 @@
 var TemplateModule = (function () {
 
 	function scrollToTarget(element, target) {
-		$(element).click(function(e) {
+		bk$(element).click(function(e) {
 			e.preventDefault();
-			$('html, body').animate({
-				'scrollTop': $(target).offset().top
+			bk$('html, body').animate({
+				'scrollTop': bk$(target).offset().top
 			});
 		});
 	}
 
 	function toggleMenuChildren() {
-		$('.js-menu-list .item-name--parent').click(function() {
-			$(this).next('.navigation-list--children').slideToggle('fast');
+		bk$('.js-menu-list .item-name--parent').click(function() {
+			bk$(this).next('.navigation-list--children').slideToggle('fast');
 		});
 	}
 
